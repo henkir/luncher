@@ -1,0 +1,13 @@
+apply plugin: 'scala'
+
+test {
+    testLogging {
+        events 'passed'
+        exceptionFormat "full"
+    }
+}
+
+apply from: 'gradle/dependencies.gradle'
+apply from: 'gradle/eclipse.gradle'
+
+defaultTasks 'build'
